@@ -4,3 +4,5 @@ C:\Users\Salik\Documents\Visual Studio 2012\Projects\ProducerConsumer\ProducerCo
 C:\Users\Salik\Documents\Visual Studio 2012\Projects\ProducerConsumer\ProducerConsumer\bin\Debug\ProducerConsumer.pdb
 C:\Users\Salik\Documents\Visual Studio 2012\Projects\ProducerConsumer\ProducerConsumer\obj\Debug\ProducerConsumer.exe
 C:\Users\Salik\Documents\Visual Studio 2012\Projects\ProducerConsumer\ProducerConsumer\obj\Debug\ProducerConsumer.pdb
+C:\Users\Salik\Documents\Visual Studio 2012\Projects\ProducerConsumer\ProducerConsumer\bin\Debug\log4net.dll
+C:\Users\Salik\Documents\Visual Studio 2012\Projects\ProducerConsumer\ProducerConsumer\bin\Debug\log4net.xml

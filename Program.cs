@@ -16,16 +16,18 @@ namespace ProducerConsumer
             Thread produce = new Thread(Producer);
             Thread comsumer = new Thread(Consumer);
 
-            
+            produce.Start();
+            comsumer.Start();
+            produce.Join();
+            comsumer.Join();
         }
 
         static void Producer()
         {
             Console.WriteLine("Producer starts!");
-            Console.ReadKey();
-            while (true)
+            for (int i = 0; i < 100; i++)
             {
-                Thread.Sleep(1000);
+                Thread.Sleep(300);
                 Random rnd = new Random();
                 int number = rnd.Next(1, 100);
                 bb.Put(number);
@@ -35,9 +37,10 @@ namespace ProducerConsumer
 
         static void Consumer()
         {
-            while (true)
+            Console.WriteLine("Comsumer starts");
+            for (int i = 0; i < 100; i++)
             {
-                Thread.Sleep(700);
+                Thread.Sleep(1000);
                 int taken = bb.Take();
                 Console.WriteLine("Take: " + taken);
             }

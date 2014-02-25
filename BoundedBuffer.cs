@@ -32,16 +32,18 @@ namespace ProducerConsumer
             Monitor.Enter(queue);
             try
             {
-                if (IsFull())
+                while (IsFull())
                 {
                     Monitor.Wait(queue);
+                    
                 }
                 queue.Enqueue(element);
+                Monitor.PulseAll(queue);
+                
             }
             finally
             {
                 Monitor.Exit(queue);
-                Monitor.Pulse(queue);
             }
             
         }
@@ -49,21 +51,21 @@ namespace ProducerConsumer
         public int Take()
         {
             Monitor.Enter(queue);
-            int temp;
             try
             {
-                if (queue.Count == 0)
+                while (queue.Count == 0)
                 {
                     Monitor.Wait(queue);
                 }
-                temp = queue.Dequeue();
+                int temp = queue.Dequeue();
+                Monitor.PulseAll(queue);
+                return temp;
             }
             finally
             {
                 Monitor.Exit(queue);
-                Monitor.Pulse(queue);
             }
-            return temp;
+           
         }
     }
 }
