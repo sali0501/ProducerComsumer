@@ -14,7 +14,7 @@ namespace ProducerConsumer
         static void Main(string[] args)
         {
             Thread produce = new Thread(Producer);
-            //Thread comsumer = new Thread(Consumer);
+            Thread comsumer = new Thread(Consumer);
 
             
         }
