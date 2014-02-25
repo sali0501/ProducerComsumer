@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace ProducerConsumer
 {
@@ -13,16 +13,24 @@ namespace ProducerConsumer
 
         static void Main(string[] args)
         {
-            Thread produce = new Thread(Producer);
-            Thread comsumer = new Thread(Consumer);
+            Producer producer = new Producer(bb, 100);
+            Comsumer comsumer = new Comsumer(bb, 100);
+            Console.ReadKey();
+        }
+
+        public static void tryBoundedBuffer()
+        {
+            Thread produce = new Thread(ProducerBoundedBuffer);
+            Thread comsumer = new Thread(ConsumerBoundedBuffer);
 
             produce.Start();
             comsumer.Start();
+
             produce.Join();
             comsumer.Join();
         }
 
-        static void Producer()
+        static void ProducerBoundedBuffer()
         {
             Console.WriteLine("Producer starts!");
             for (int i = 0; i < 100; i++)
@@ -35,7 +43,7 @@ namespace ProducerConsumer
             }
         }
 
-        static void Consumer()
+        static void ConsumerBoundedBuffer()
         {
             Console.WriteLine("Comsumer starts");
             for (int i = 0; i < 100; i++)
