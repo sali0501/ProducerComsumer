@@ -1,0 +1,6 @@
+c:\users\salik\documents\visual studio 2012\Projects\ProducerConsumer\ProducerConsumer\bin\Debug\ProducerConsumer.exe.config
+C:\Users\Salik\Documents\Visual Studio 2012\Projects\ProducerConsumer\ProducerConsumer\obj\Debug\ProducerConsumer.csprojResolveAssemblyReference.cache
+C:\Users\Salik\Documents\Visual Studio 2012\Projects\ProducerConsumer\ProducerConsumer\bin\Debug\ProducerConsumer.exe
+C:\Users\Salik\Documents\Visual Studio 2012\Projects\ProducerConsumer\ProducerConsumer\bin\Debug\ProducerConsumer.pdb
+C:\Users\Salik\Documents\Visual Studio 2012\Projects\ProducerConsumer\ProducerConsumer\obj\Debug\ProducerConsumer.exe
+C:\Users\Salik\Documents\Visual Studio 2012\Projects\ProducerConsumer\ProducerConsumer\obj\Debug\ProducerConsumer.pdb
