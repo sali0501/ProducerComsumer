@@ -13,6 +13,7 @@ namespace ProducerConsumer
 
         static void Main(string[] args)
         {
+            //Thread p = new Thread();
             Producer producer = new Producer(bb, 100);
             Comsumer comsumer = new Comsumer(bb, 100);
             Console.ReadKey();
